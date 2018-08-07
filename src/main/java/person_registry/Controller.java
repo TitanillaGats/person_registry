@@ -102,6 +102,8 @@ public class Controller {
             return;
         }
 
+        name = name.substring(0,1).toUpperCase() + name.substring(1);
+
         if(personRegistry.containsKey(name)) {
             if (modifyPersonInRegistry(name, numberTextField.getText(), emailTextField.getText())) {
                 logInfo("Updated person in registry");
@@ -136,6 +138,8 @@ public class Controller {
             logException("Person name is not provided, can't delete anyone from registry");
             return;
         }
+
+        name = name.substring(0,1).toUpperCase() + name.substring(1);
 
         if(personRegistry.get(name) != null) {
             logInfo("Person named '" + name + "' is deleted from registry");
@@ -253,7 +257,7 @@ public class Controller {
      * @param name the person's name provided by the user
      * @param number the person's phone number provided by the user
      * @param email the person's email address provided by the user
-     * @return
+     * @return whether the person's data has changed
      */
     boolean modifyPersonInRegistry(String name, String number, String email) {
         Person person = personRegistry.get(name);

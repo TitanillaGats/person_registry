@@ -25,9 +25,9 @@ public class Person {
      * @param email the person's email address
      */
     public Person(String name, String phoneNumber, String email){
-        setName(name.trim());
-        setPhoneNumber(phoneNumber.trim());
-        setEmail(email.trim());
+        setName(name);
+        setPhoneNumber(phoneNumber);
+        setEmail(email);
     }
 
     /**
@@ -46,6 +46,8 @@ public class Person {
      */
     private void setName(String name) {
         name = name.trim().replaceAll("\"", "");
+        name = name.substring(0,1).toUpperCase() + name.substring(1);
+
         this.name = name;
     }
 
