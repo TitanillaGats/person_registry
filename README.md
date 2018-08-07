@@ -51,6 +51,7 @@ For multiple reasons, the saving logic is on a new thread that checks for interr
 
 ## Further characteristics
 ### Valid phone number
+The registry only handles mobile phone numbers.</br>
 A phone number is considered valid if it has 11 digits and may start with a '+'.</br>
 Every phone number is stored in the same format: "0620/123-4567" or "+3620/123-4567".
 
