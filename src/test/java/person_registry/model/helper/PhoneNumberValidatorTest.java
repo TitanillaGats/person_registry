@@ -44,7 +44,7 @@ public class PhoneNumberValidatorTest {
         validPhoneNumbers.add("0630/1234567");
         validPhoneNumbers.add("0630/123-4567");
 
-        String formattedPhoneNumber = "06(30)123-4567";
+        String formattedPhoneNumber = "0630/123-4567";
 
         for(String validNumber : validPhoneNumbers){
             TestCase.assertEquals(formattedPhoneNumber, PhoneNumberValidator.formatPhoneNumber(validNumber));
@@ -63,7 +63,7 @@ public class PhoneNumberValidatorTest {
         validPhoneNumbersWithPlus.add("+3630/1234567");
         validPhoneNumbersWithPlus.add("+3630/123-4567");
 
-        String formattedPhoneNumberWithPlus = "+36(30)123-4567";
+        String formattedPhoneNumberWithPlus = "+3630/123-4567";
 
         for(String validNumber : validPhoneNumbersWithPlus){
             TestCase.assertEquals(formattedPhoneNumberWithPlus, PhoneNumberValidator.formatPhoneNumber(validNumber));
