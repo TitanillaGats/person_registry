@@ -238,17 +238,12 @@ public class Controller {
      * The default separator of number and email is ','.
      */
     void declareSeparatorCharacters(){
-        System.out.println("\nFirst line is: '" + firstLine + "'");
-
         String schema = firstLine.trim().toLowerCase();
         schema = schema.replaceFirst("name", "");
         nameNumberSeparator = schema.substring(0,1);
         schema = schema.trim().substring(1);
         schema = schema.replaceFirst("number", "");
         numberEmailSeparator = schema.substring(0,1);
-
-        System.out.println("Name-Number separator character is: '" + nameNumberSeparator + "'");
-        System.out.println("Number-Email separator character is: '" + numberEmailSeparator + "'");
     }
 
     /**
