@@ -7,7 +7,7 @@ public class PhoneNumberValidator {
     /**
      * String defining the unitary format of phone numbers.
      */
-    private static final String PHONE_NUMBER_FORMAT = "%s(%s)%s-%s";
+    private static final String PHONE_NUMBER_FORMAT = "%s/%s-%s";
 
     /**
      * Regular expression to match valid phone numbers.
@@ -60,17 +60,15 @@ public class PhoneNumberValidator {
      * @return the phone number formatted properly
      */
     private static String doSubstitution(String phoneNumber){
-        String prefix;
-        String supplier;
-        String number_part1;
-        String number_part2;
+        String dialingCode;
+        String numberPart1;
+        String numberPart2;
 
-        prefix = phoneNumber.substring(0,2);
-        supplier = phoneNumber.substring(2,4);
-        number_part1 = phoneNumber.substring(4,7);
-        number_part2 = phoneNumber.substring(7);
+        dialingCode = phoneNumber.substring(0,4);
+        numberPart1 = phoneNumber.substring(4,7);
+        numberPart2 = phoneNumber.substring(7);
 
-        return String.format(PHONE_NUMBER_FORMAT, prefix, supplier, number_part1, number_part2);
+        return String.format(PHONE_NUMBER_FORMAT, dialingCode, numberPart1, numberPart2);
     }
 
     /**
