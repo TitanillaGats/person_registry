@@ -9,7 +9,7 @@ The registry may also store a person's phone number or email address if the one 
 Invalid data will be marked as "INVALID" in the output.
 
 Any exception occurring during the running will be printed to the output with a leading "EXCEPTION:" marker.</br>
-To inform the user of a decesion or event, messages will be printed to the output with a leading "INFO:" marker.
+To inform the user of a decision or event, messages will be printed to the output with a leading "INFO:" marker.
 
 ## Open a registry
 
