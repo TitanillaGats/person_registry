@@ -1,0 +1,111 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+
+<?import javafx.geometry.Insets?>
+<GridPane fx:controller="person_registry.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <padding>
+        <Insets bottom="10" left="50" right="50" top="10" />
+    </padding>
+
+    <Label
+            fx:id="filePathLabel"
+            text="File path:"
+            GridPane.columnIndex="0" GridPane.rowIndex="0"
+            minWidth="60"
+            alignment="CENTER_RIGHT"
+    />
+
+    <TextField
+            fx:id="registryFilePath"
+            GridPane.columnIndex="1" GridPane.rowIndex="0"
+            minWidth="200"
+    />
+
+    <Button
+            fx:id="processButton"
+            text="Process"
+            GridPane.columnIndex="2" GridPane.rowIndex="0"
+            onAction="#handleProcessButtonAction"
+            minWidth="120"
+    />
+
+    <Button
+            fx:id="saveButton"
+            text="Save"
+            GridPane.columnIndex="3" GridPane.rowIndex="0"
+            onAction="#handleSaveButtonAction"
+            minWidth="120"
+    />
+
+    <Label
+            fx:id="nameLabel"
+            text="Name:"
+            GridPane.columnIndex="0" GridPane.rowIndex="1"
+            minWidth="60"
+            alignment="CENTER_RIGHT"
+    />
+
+    <TextField
+            fx:id="nameTextField"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"
+            minWidth="200"
+    />
+
+    <Label
+            fx:id="numberLabel"
+            text="Number:"
+            GridPane.columnIndex="0" GridPane.rowIndex="2"
+            minWidth="60"
+            alignment="CENTER_RIGHT"
+    />
+
+    <TextField
+            fx:id="numberTextField"
+            GridPane.columnIndex="1" GridPane.rowIndex="2"
+            minWidth="200"
+    />
+
+    <Label
+            fx:id="emailLabel"
+            text="Email:"
+            GridPane.columnIndex="0" GridPane.rowIndex="3"
+            minWidth="60"
+            alignment="CENTER_RIGHT"
+    />
+
+    <TextField
+            fx:id="emailTextField"
+            GridPane.columnIndex="1" GridPane.rowIndex="3"
+            minWidth="200"
+    />
+
+    <Button
+            fx:id="addModifyPersonButton"
+            text="Add/update person"
+            GridPane.columnIndex="2" GridPane.rowIndex="1"
+            onAction="#handleAddModifyPersonButtonAction"
+            minWidth="120"
+    />
+
+    <Button
+            fx:id="deletePersonButton"
+            text="Delete person"
+            GridPane.columnIndex="2" GridPane.rowIndex="2"
+            onAction="#handleDeletePersonButtonAction"
+            minWidth="120"
+    />
+
+    <TextArea fx:id="processingOutput"
+              editable="false"
+              focusTraversable="false"
+              GridPane.rowIndex="4" GridPane.columnSpan="4"
+              minHeight="350"
+              minWidth="500"
+    />
+</GridPane>
